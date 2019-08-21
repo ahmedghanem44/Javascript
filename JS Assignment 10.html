@@ -1,0 +1,48 @@
+<!-- 10. A Tip Calculator is a calculator that calculates a tip based on the percentage of the total bill.
+We add onchange event. The onchange event occurs when user interacts with the form.
+This action will execute a function that computes the final bill amount based on the percentage tip, then returns the results. -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body align="center">
+    <h1>Tip Calculator</h1>
+    <br><br><br>
+    How much was your bill ?
+    <br><br>
+    $  <input id="bill" type="number" style="height:30px;width:200px">
+    <br><br><br>
+    How was your service ?
+    <br><br>
+    <select id="service" onchange="calculateTip()" style="height:30px;width:200px;text-align:center">
+      <option>--Choose an option</option>
+      <option value=30>30% - Outstanding</option>
+      <option value=20>20% - Good</option>
+      <option value=15>15% - It was OK</option>
+      <option value=10>10% - Bad</option>
+      <option value=5>5% - Terrible</option>
+    </select>
+    <br><br><br>
+    How many people are sharing the bill ?
+    <br><br>
+    <input id="people" type="number" style="height:30px;width:200px" value="1">
+    <br><br><br>
+    <h3>TIP AMOUNT</h3>
+    <h1 id="tip"></h1>
+    <h4>Each</h4>
+  </body>
+  <script type="text/javascript">
+
+    function calculateTip(){
+      var bill = document.getElementById("bill").value;
+      var service = document.getElementById("service").value;
+      var people = document.getElementById("people").value;
+      let tip = (bill * service/100) / people;
+      document.getElementById("tip").innerHTML = "$ "+tip;
+    }
+  </script>
+</html>

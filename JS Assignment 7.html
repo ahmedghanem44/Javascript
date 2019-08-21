@@ -1,0 +1,90 @@
+<!-- 7.	Create two car objects that has properties:
+Make
+Model
+Color
+Mileage
+isWorking
+driveToWork()-------add 8 to existing mileage, alert old and new mileage
+driveAroundTheWorld()-------add 24000 to existing mileage, alert old and new mileage, alert car needs a TuneUp, set isWorking to false
+getTuneUp()-------alert car ready to go and set isWorking true
+honk()--------alert Honk
+How would we run the car's driveToWork method?
+How would we run the car's driveAroundWorld method?
+How would we run the getTuneUp method? -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Honda Car Tracking</h3>
+    Please click any button to run the method
+    <button onclick="car1.driveToWork()">Honda drive to work</button>
+    <button onclick="car1.driveAroundTheWorld()">Honda around the world</button>
+    <button onclick="car1.getTuneUp()"> Honda Tune up</button>
+    <button onclick="car1.honk()">Honda Honk</button>
+    <br><br><br><br>
+    <h3>Jeep Car Tracking</h3>
+    Please click any button to run the method
+    <button onclick="car2.driveToWork()">Jeep drive to work</button>
+    <button onclick="car2.driveAroundTheWorld()">Jeep around the world</button>
+    <button onclick="car2.getTuneUp()"> Jeep Tune up</button>
+    <button onclick="car2.honk()">Jeep Honk</button>
+
+  </body>
+  <script type="text/javascript">
+    class Car {
+      make='Honda';
+      model='Accord';
+      color='Silver';
+      mileage= 16000;
+      isWorking= true;
+      driveToWork=function(){
+        if(this.isWorking == true){
+          let newMileage = this.mileage +8;
+          alert("Your mileage increased to "+newMileage+" from "+this.mileage);
+          this.mileage = newMileage ;
+        }else{
+          alert("Your car is not working , tune it up to hit the road");
+        }
+      };
+      driveAroundTheWorld= function(){
+        if(this.isWorking == true){
+          let newMileage = this.mileage +24000;
+          alert("Your mileage increased to "+newMileage+" from "+this.mileage);
+          this.mileage = newMileage ;
+          alert("Your car needs a Tune up");
+          this.isWorking = false;
+        }else{
+          alert("Your car is not working , tune it up to hit the road");
+        }
+      };
+      getTuneUp = function(){
+        this.isWorking = true;
+        alert ("Your car is ready to hit the road");
+      };
+      honk= function(){
+        alert("Beeeeeeeeeeeeeep");
+      }
+    };
+
+    var car1 = new Car();
+    var car2 = new Car();
+
+    car2.make = 'Jeep';
+    car2.model='Wrangler';
+    car2.color='Black';
+    car2.mileage = 19500;
+
+    // console.log(car1.color);
+    // console.log(car2.color);
+    // console.log(car1.make);
+    // console.log(car2.make);
+    // console.log(car1.model);
+    // console.log(car2.model);
+
+
+  </script>
+</html>

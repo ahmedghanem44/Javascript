@@ -1,0 +1,34 @@
+<!--  4.	Create an object to hold information on your favorite recipe. It should have properties for title (a string),
+servings (a number), and ingredients (an array of strings).
+On separate lines (one console.log statement for each), log the recipe information so it looks like:
+Mole
+Serves: 2
+Ingredients:
+cinnamon
+cumin
+cocoa
+	 ------------------ -->
+
+   <HTML>
+   	<HEAD>
+   		<title>
+   			JS Assignment 4
+   		</title>
+   	</HEAD>
+   	<body>
+   	</body>
+    <script type="text/javascript">
+          var Recipe={
+            title :"Grilled Shrimp",
+            serves: 5,
+            ingredients:["Shrimp","Garlic","Lemon","Seafood Seasoning"]
+          };
+          console.log(Recipe.title);
+          console.log("Serves: "+Recipe.serves);
+          console.log("Ingredients:")
+          for(var i =0 ; i<Recipe.ingredients.length; i++){
+            console.log(Recipe.ingredients[i]);
+          }
+    </script>
+
+   </HTML>

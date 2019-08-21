@@ -1,0 +1,22 @@
+<!-- 8.	Create an image banner which appears after launch the page 5 seconds. -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>The image will appear in 5 seconds</h1>
+  </body>
+  <script type="text/javascript">
+    function image(){
+      var img = document.createElement("img");
+      img.setAttribute('src','diver.jpg');
+      img.setAttribute('width','800px');
+      img.setAttribute('height','600px');
+      document.body.appendChild(img);
+    }
+    setTimeout(image,5000);
+  </script>
+</html>

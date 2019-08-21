@@ -1,0 +1,29 @@
+<!-- 5.	Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!
+Write a function named calculateSupply that:
+takes 2 arguments: age, amount per day.
+calculates the amount consumed for rest of the life (based on a constant max age).
+outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"
+Call that function three times, passing in different values each time. -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    function calculateSupply(age,amountPerDay){
+        var remainingYear = 70-age;
+        var amountPerYear = amountPerDay * 365;
+        var total = remainingYear * amountPerYear;
+        return  total ;
+    }
+    document.write("You will need "+calculateSupply(30,2)+" to last you until the age of 70 <br>");
+    document.write("You will need "+calculateSupply(40,3)+" to last you until the age of 70 <br>");
+    document.write("You will need "+calculateSupply(50,5)+" to last you until the age of 70 <br>");
+
+  </script>
+</html>

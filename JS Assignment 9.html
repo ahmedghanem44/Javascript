@@ -1,0 +1,32 @@
+<!-- 9.	Create a checking zipcode feature. If the zipcode smaller than 25000 returns “not covered” in red,
+If the zip code is larger or equal 25000 return “Covered” in green -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body align="center">
+    <h1>ZipCode Checker</h1><br><br>
+    <h3 id="result"></h3>
+    <input id="zip" type="text" style="height:30px;width:200px;text-align:center"/><br><br>
+    <button onclick="checker()" style="height:50px;width:100px">Check</button>
+  </body>
+  <script type="text/javascript">
+
+    function checker(){
+      let zipcode = document.getElementById("zip").value;
+      if (zipcode >= 25000){
+        console.log(zipcode);
+        document.getElementById("result").innerHTML ="<font color="+"green"+">Covered</font>";
+      }else{
+        console.log(zipcode);
+        document.getElementById("result").innerHTML="<font color="+"red"+">Uncovered</font>";
+      }
+    }
+
+
+  </script>
+</html>

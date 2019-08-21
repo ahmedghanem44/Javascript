@@ -1,0 +1,32 @@
+ <!-- 1.	Create an HTML page that performs the following operation:
+Welcomes the user to the page using alert
+Ask the User to enter his/her name using prompt
+Using a Confirm, ask the user if he/she like Soccer
+Display the User name and his/her interest in Soccer on the page loaded and on the console -->
+<HTML>
+	<HEAD>
+		<title>
+			JS Assignment 1
+		</title>
+	</HEAD>
+	<body>
+			<h1 id="title"></h1>
+			<h3 id="sub"></h3>
+	</body>
+	<script type="text/javascript">
+		alert("Welcome to the first JS assignment");
+		var name = prompt("What is your name ?");
+		var likeSoccer = confirm("Do you like Soccer ?");
+		var result;
+		if(likeSoccer){
+			result = "do";
+		}else{
+			result = "don't";
+		}
+		document.getElementById("title").innerHTML = "Welcome to our website '"+name+"'" ;
+		document.getElementById("sub").innerHTML = "It seems like you " +result+" like Soccer";
+		// document.write("Welcome to our website "+name+" , it seems like you " +result+" like Soccer");
+		console.log("Welcome to our website "+name+" , it seems like you " +result+" like Soccer");
+	</script>
+
+</HTML>
